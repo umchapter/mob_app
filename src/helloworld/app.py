@@ -53,9 +53,12 @@ class HelloWorld(toga.App):
         self.main_window.content = main_box
         self.main_window.show()
 
-    # handler 메소드를 정의함.
+    # handler 메소드를 정의함. # 업데이트
     def say_hello(self, widget) :
-        print("Hello,", self.name_input.value)
+        self.main_window.info_dialog(
+            f"Hello, {self.name_input.value}",
+            "Hi there!"
+        )
 
 # helloworld 폴더에서 cmd : briefcase dev
 def main():
